@@ -3,15 +3,21 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import WelcomeScreen from '../screens/WelcomeScreen';
 import LoginScreen from '../screens/LoginScreen';
 import SignUpScreen from '../screens/SignUpScreen';
-import ConsultationsListScreen from '../screens/BatteryScreen';
+import ConsultationsListScreen from '../screens/BatteryScreen';  // Corrigido o caminho da tela
+import ChargingPreferencesScreen from '../screens/ChargingPreferencesScreen';  // Nova tela de ajustes de carregamento
 
-// Definindo o RootStackParamList com todas as telas do projeto
+// Definindo o RootStackParamList com todos os parâmetros corretos
 export type RootStackParamList = {
   Welcome: undefined;
   Login: undefined;
   SignUp: undefined;
   ConsultationsList: undefined;
-  ScheduleConsultation: undefined;
+  ChargingPreferences: {  // Alteração: agora inclui os parâmetros 'model', 'time', 'status', e 'type'
+    model: string;
+    time: string;
+    status: string;
+    type: string;  // Adicionando o novo parâmetro 'type'
+  };
   ConfirmAppointment: undefined;
 };
 
@@ -40,7 +46,11 @@ const AppNavigator = () => {
         component={ConsultationsListScreen} 
         options={{ title: 'Tela de Recarga' }} // Título personalizável
       />
-      
+      <Stack.Screen 
+        name="ChargingPreferences" 
+        component={ChargingPreferencesScreen}  // A nova tela
+        options={{ title: 'Cadastro de veículo realizado com sucesso!' }} // Título para a nova tela
+      />
     </Stack.Navigator>
   );
 };
