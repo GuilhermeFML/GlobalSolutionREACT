@@ -1,6 +1,8 @@
 # GlobalSolutionREACT
 Guilherme Fernandes Miguel Lorenzi RM93525
+
 João Pedro Camargo Pereira dos Santos RM95478
+
 Matheus Lessa Pereira RM93808
   
 Foi criado uma aplicação onde o usuário cria uma conta que é salva no backend, com isso ele sempre entra com o mesmo login no site.
