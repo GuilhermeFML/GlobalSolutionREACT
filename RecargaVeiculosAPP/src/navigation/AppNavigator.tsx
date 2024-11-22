@@ -3,8 +3,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import WelcomeScreen from '../screens/WelcomeScreen';
 import LoginScreen from '../screens/LoginScreen';
 import SignUpScreen from '../screens/SignUpScreen';
-import ConsultationsListScreen from '../screens/BatteryScreen';  // Corrigido o caminho da tela
-import ChargingPreferencesScreen from '../screens/ChargingPreferencesScreen';  // Nova tela de ajustes de carregamento
+import ConsultationsListScreen from '../screens/BatteryScreen';  
+import ChargingPreferencesScreen from '../screens/ChargingPreferencesScreen';  
 
 // Definindo o RootStackParamList com todos os parâmetros corretos
 export type RootStackParamList = {
@@ -12,7 +12,7 @@ export type RootStackParamList = {
   Login: undefined;
   SignUp: undefined;
   ConsultationsList: undefined;
-  ChargingPreferences: {  // Alteração: agora inclui os parâmetros 'model', 'time', 'status', e 'type'
+  ChargingPreferences: {  
     model: string;
     time: string;
     status: string;
@@ -29,27 +29,27 @@ const AppNavigator = () => {
       <Stack.Screen 
         name="Welcome" 
         component={WelcomeScreen} 
-        options={{ title: 'Tela Inicial' }} // Título personalizável
+        options={{ title: 'Tela Inicial' }}
       />
       <Stack.Screen 
         name="Login" 
         component={LoginScreen} 
-        options={{ title: 'Acesse sua conta' }} // Título personalizável
+        options={{ title: 'Acesse sua conta' }} 
       />
       <Stack.Screen 
         name="SignUp" 
         component={SignUpScreen} 
-        options={{ title: 'Cadastrar' }} // Título personalizável
+        options={{ title: 'Cadastrar' }} 
       />
       <Stack.Screen 
         name="ConsultationsList" 
         component={ConsultationsListScreen} 
-        options={{ title: 'Tela de Recarga' }} // Título personalizável
+        options={{ title: 'Tela de Recarga' }} 
       />
       <Stack.Screen 
         name="ChargingPreferences" 
-        component={ChargingPreferencesScreen}  // A nova tela
-        options={{ title: 'Cadastro de veículo realizado com sucesso!' }} // Título para a nova tela
+        component={ChargingPreferencesScreen}  
+        options={{ title: 'Cadastro de veículo realizado com sucesso!' }} 
       />
     </Stack.Navigator>
   );
