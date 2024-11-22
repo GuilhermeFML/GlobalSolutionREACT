@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NativeBaseProvider, Box, Button, Center, Text, Input, FormControl, HStack, IconButton, VStack } from 'native-base';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../navigation/AppNavigator'; // Importação da tipagem correta
+import { RootStackParamList } from '../navigation/AppNavigator'; 
 import { Ionicons } from '@expo/vector-icons';
 
 type ConsultationsListScreenNavigationProp = NativeStackNavigationProp<
